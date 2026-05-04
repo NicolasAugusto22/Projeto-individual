@@ -4,7 +4,9 @@
             background-color: black;
             font-family: Arial, sans-serif;
             color: #fff;
-        }
+  background: radial-gradient(circle at bottom, #252222 0%, #000 60%);
+}
+        
 
         .navbar {
             display: flex;
