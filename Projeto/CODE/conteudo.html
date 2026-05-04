@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-color: black;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            margin: 10px;
+            background: black;
+            backdrop-filter: blur(10px);
+            border-radius: 14px;
+            animation: slideDown 0.6s ease-out;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 0;
+            left: 10px;
+            right: 10px;
+            z-index: 1000;
+            width: auto;
+            box-sizing: border-box;
+        }
+
+        .navbar:hover {
+            background: rgba(0, 0, 0, 0.95);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            height: 48px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar .logo img {
+            display: block;
+            width: auto;
+            max-height: 48px;
+            background: transparent;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .navbar nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 0;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .navbar nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+            transition: width 1s ease;
+        }
+
+        .navbar nav a:hover {
+            color: #4ecdc4;
+        }
+
+        .navbar nav a:hover::after {
+            width: 100%;
+        }
+
+        .content {
+            padding: 60px 24px;
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            min-height: calc(100vh - 100px);
+            background-image: url(img/backgound.png);
+        }
+
+        .boasvindas {
+            background: black ;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .boasvindas1 {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            margin-top: 0;
+            font-size: 18px;
+            color: #ddd;
+            transition: opacity 0.4s ease, max-height 0.4s ease, margin-top 0.4s ease;
+        }
+        .boasvindas:hover .boasvindas1 {
+            display: block;
+            max-height: 300px;
+            opacity: 1;
+            margin-top: 20px;
+        }
+.login {
+    background: black;  
+    padding: 40px;
+    border-radius: 12px;  
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 40px auto;
+    width: 300px;
+    border: 1px solid #fff;
+}
+.id_email, .id_senha, .id_csenha {
+    margin-bottom: 20px;
+    background: transparent;
+    padding: auto;
+    border-radius: 0%;
+}
+
+.id_email input, .id_senha input, .id_csenha input {
+    width: 100%;  
+    padding: 10px;
+    border: 1px solid #fff; 
+    border-radius: 4px;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 42px;
+}
+.id_button button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 42px;
+}
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo" onclick="location.reload();">
+            <img src="img/logomaiorsemfundo.png" alt="Logo" style="max-width: 100%; ">
+        </div>
+        <nav>
+            <a href="homepag.html">Home</a>
+            <a href="cadastro.html">Cadastro</a>
+        </nav>
+    </header>
+<div>
+    <main class="content">
+    <div class="boasvindas">
+       <h1>Bem-vindo à GYMTECH</h1>
+       <div class="boasvindas1">
+       <p>
+        Descubra um novo jeito de se exercitar com <br>
+        nossos serviços exclusivos!, tenha acesso a<br>
+        treinos especificos para cada musculo e <br>
+        alimentação personalizada para cada objetivo
+       </p>
+       </div>
+       </div>
+    </main>
+</div>
+    <div>
+        <main class="login">
+          <form>
+            <h1>Faça cadastro para ter acesso !</h1>
+            <div class="id_email">
+                <input type="email" id="input_email" placeholder="Usuário">
+            </div>
+            <div class="id_senha">
+                <input type="text" id="input_senha" placeholder="Senha">
+            </div>
+            <div class="id_csenha">
+                <input type="password" id="input_csenha" placeholder="Confirme sua senha">
+            </div>
+            <div class="id_button">
+            <button type="submit">Criar Conta</button>
+            </div>
+            <div class="register-link">
+                <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+            </div>
+          </form>
+        </main>
+    </div>
+</body>
+</html> 

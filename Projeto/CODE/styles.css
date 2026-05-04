@@ -1,0 +1,287 @@
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-color: black;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            margin: 10px;
+            background: #252222;
+            backdrop-filter: blur(10px);
+            border-radius: 14px;
+            animation: slideDown 0.6s ease-out;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 0;
+            left: 10px;
+            right: 10px;
+            z-index: 1000;
+            width: auto;
+            box-sizing: border-box;
+        }
+
+        .navbar:hover {
+            background: rgba(0, 0, 0, 0.95);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            height: 48px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar .logo img {
+            display: block;
+            width: auto;
+            max-height: 48px;
+            background: transparent;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar nav {
+            display: flex;
+            gap: 30px;;
+        }
+
+        .navbar nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 0;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .navbar nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+            transition: width 1s ease;
+        }
+
+        .navbar nav a:hover {
+            color: #4ecdc4;
+        }
+
+        .navbar nav a:hover::after {
+            width: 100%;
+        }
+
+        .content {
+            padding: 60px 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 100px);
+            background-image: url(img/backgroundlogin.png);
+        }
+
+        .boasvindas {
+            background: black ;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin: 0 auto;
+            border: 1px solid #fff;
+        }
+        .boasvindas1 {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            margin-top: 0;
+            font-size: 18px;
+            color: #ddd;
+            transition: opacity 0.4s ease, max-height 0.4s ease, margin-top 0.4s ease;
+        }
+        .boasvindas:hover .boasvindas1 {
+            display: block;
+            max-height: 300px;
+            opacity: 1;
+            margin-top: 20px;
+        }
+.login {
+    background: black;  
+    padding: 40px;
+    border-radius: 12px;  
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 40px auto;
+    width: 300px;
+    border: 1px solid #fff;
+}
+.id_email, .id_senha, .id_csenha {
+    margin-bottom: 20px;
+    background: transparent;
+    padding: auto;
+    border-radius: 0%;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background: transparent;
+    color: #fff;
+    margin: 40px auto;
+    width: 300px;
+    border-radius: 12px;
+    }
+
+.id_email input, .id_senha input, .id_csenha input {
+    width: 100%;  
+    padding: 10px;
+    border: 1px solid #fff; 
+    border-radius: 4px;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 42px;
+}
+.id_button button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 42px;
+}
+.texto-box {
+    margin: 40px auto;
+    width: 50%;
+    background: black;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    border: 2px solid #fff;
+    text-align: right;
+}
+.texto1 {
+    margin: 40px auto;
+    width: 400px;
+    text-align: center;
+    content: '';
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 20px;
+    border-radius: 12px;
+}
+.linha {
+    margin: 40px auto;
+    width: 89%;
+    height: 2px;
+    background: #fff;
+    border-radius: 12px;
+    place-items: flex-start;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+.linha-vertical {
+    margin: 40px auto;
+    width: 0.5%;
+    height: 2000px;
+    background: #fff;
+    border-radius: 12px;
+    padding: auto;
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    padding: 100px 0;
+}
+
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.texto-box {
+    width: 40%;
+    padding: 1px 5px;
+    background: black;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    position: relative;
+    margin:  1px 1px;
+    text-align: center;
+}
+.timeline {
+    position: relative;
+    width: 100%;
+    padding: 100px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.texto-box {
+    width: 30%;
+    background: black;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    padding: 40px;
+    position: relative;
+    margin:  5px 100px;
+    text-align: center;
+
+}
+.box-imagem {
+    width: 40%;
+    background: black;
+    border: 3px solid #fff;
+    border-radius: 12px;
+    position: auto;
+    margin:  1px 65px;
+    text-align: center;
+    max-width: 500px;
+    padding: 5px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
