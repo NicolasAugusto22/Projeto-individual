@@ -90,7 +90,7 @@
             justify-content: center;
             align-items: center;
             min-height: calc(100vh );
-            background-image: url(img/backgroundconteudo.png);
+            background-color: black;
             background-size: cover;
             background-position: center;
         }
@@ -314,4 +314,14 @@ html {
     margin:  1px 1px;
     text-align: center;
     
+        }
+.dashboard-container {
+            background: #ffffff;
+            padding: 20px;
+            border: 2px solid #000000;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+            width: 400px;
+        }
+        canvas {
+            max-width: 100%;
         }

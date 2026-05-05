@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesMedio.css">
-    <title>homepage</title>
+    <link rel="stylesheet" href="stylesFinal.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Evolução</title>
 </head>
 <body>
     <header class="navbar">
@@ -14,38 +15,20 @@
         <nav>
             <a href="dieta.html">Dieta</a>
             <a href="treino.html">Treino</a>
-            <a href="evolucao.html">evolução</a>
+            <a href="homepage.html">Home</a>
         </nav>
     </header>
 <div>
     <main class="content">
         <div class="text-section">
-            <main class="login">
-                <h1>Desenvolva seu potencial</h1>
-                    <p>
-                        Descubra um novo jeito de se exercitar com <br>
-                    <div class="id_peso">
-                    Qual é o seu peso atual ? <input type="text" id="peso" placeholder="Ex: 70"><br><br>
+            <main class="evolucao">
+                <h1>Acompanhe sua evolução</h1>
+                <div class="boasvindas">
+                    <div class="dashboard-container">
+                        <canvas id="ninjaChart">
+                        </canvas>
                     </div>
-                    <div class="id_altura">
-                        Qual a sua altura ? <input type="number" id="altura" placeholder="Ex: 1.75"><br><br>
-                    </div>
-                    <div class="id_objetivo">
-                        Qual o seu objetivo ? <select name="escolha" id="objetivo">
-                            <option>Escolha</option>
-                            <option value="perder_peso">Perder Peso</option>
-                            <option value="ganhar_massa">Ganhar Massa Muscular</option>
-                            <option value="manter_condicao">Manter a Condição</option>
-                        </select>
-                    </div>
-                    <br><br>
-                    <div class="id_treino">
-                        Quantas vezes por semana você treina ? <input type="number" id="treino" placeholder="Ex: 3">
-                    </div><br><br>
-                    <div class="id_button">
-                        <button type="submit" onclick="listar()">Gerar Plano Personalizado</button>
-                    </div>
-                </p>
+                </div>
             </main>
         </div>
         <div class="line-section"></div>
@@ -64,6 +47,42 @@
 </body>
 </html>
 <script>
-    function listar() {
+    const ctx = document.getElementById('ninjaChart').getContext('2d');
+
+const data = {
+    labels: ['Peso', 'Altura', 'Gasto calorico', '22', 'Genjutsu'],
+    datasets: [{
+        label: 'Atributos Ninja',
+        data: [1.8, 4, 3, 2, 10],
+        backgroundColor: 'rgba(255, 0, 0, 0.6)',
+        borderColor: 'black',
+        borderWidth: 2,
+        pointRadius: 2 
+    }]
+};
+
+const config = {
+    type: 'radar',
+    data: data,
+    options: {
+        scales: {
+            r: {
+                angleLines: { display: true },
+                suggestedMin: 0,
+                suggestedMax: 5,
+                ticks: { display: false, stepSize: 1 },
+                grid: { color: 'black' }, // Linhas da teia
+                pointLabels: {
+                    font: { size: 14, weight: 'bold' },
+                    color: 'black'
+                }
+            }
+        },
+        plugins: {
+            legend: { display: false } // Esconde a legenda para foco no gráfico
+        }
     }
+};
+
+new Chart(ctx, config);
 </script>
