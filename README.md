@@ -16,9 +16,9 @@ MySQL
 Git e GitHub
 
 # 📸 Preview
+<img src="Downloads/print1.png" alt="Logo" >
+<img src="Downloads/print2.png" alt="Logo" >
 
-<img url=(print1.png)>
-<img url=(print2.png)>
 
 # 🎯 Objetivo do projeto
 
