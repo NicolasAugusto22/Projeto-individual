@@ -26,4 +26,4 @@ Este projeto foi desenvolvido como parte de um projeto individual com o objetivo
 
 # 👨‍💻 Autor
 Nicolas Augusto da Silva
-GitHub: https://github.com/NicolasAugusto22
+GitHub: https://github.com/NicolasAugusto22 & https://www.linkedin.com/in/nicolas-augusto-da-silva-62b828246

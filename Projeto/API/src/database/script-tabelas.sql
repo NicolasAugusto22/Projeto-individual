@@ -22,4 +22,4 @@ foreign key (fkid)
 references usuario(id)
 );
 
-insert into usuario (id, email, senha, csenha) values ('1', 'adimin@gmail.com','adimin123','adimin123');
+insert into usuario (email, senha, csenha) values ( 'adimin@gmail.com','adimin123','adimin123');
