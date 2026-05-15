@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projeto/API/public/css/stylesMedio.css">
+    <title>Medidas</title>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo" onclick="location.reload();">
+            <img src="/Projeto/API/public/assets/img/logomaiorsemfundo - Copia.png" alt="Logo" style="max-width: 100%; ">
+        </div>
+        <nav>
+            <a href="index.html">sobre</a>
+            <a href="cadastro.html">cadastrar</a>
+            <a href="login.html">Logar</a>
+        </nav>
+    </header>
+<div>
+    <main class="content">
+    <div class="boasvindas">
+       <h1>Desenvolva sua melhor versão</h1>
+    <div>
+        <main class="login">
+          <form>
+            <h1>Coloque suas medidas</h1>
+            <div class="id_email">
+                <input type="text" id="input_altura" placeholder="Altura">
+            </div>
+            <div class="id_senha">
+                <input type="text" id="input_peso" placeholder="Peso">
+            </div>
+           <select class="select_objetivoo" id="select_objetivo">
+            <option>Selecione seu objetivo</option>
+            <option value="1">Perder peso</option>
+            <option value="2">Ganhar massa</option>
+            <option value="3">Manter o fisico</option>
+           </select>
+            <div class="id_button">
+            <button type="button" onclick="criar()">Criar Dieta</button>
+            </div>
+          </form>
+        </main>
+    </div>
+       </div>
+    </main>
+</div>
+<div>   
+
+
+
+    <div class="linha"></div>
+    <div class="container">
+        <p>2026 GYMTECH. Feito por<a href="https://www.linkedin.com/in/nicolas-augusto-da-silva-62b828246" class="link" > Nicolas Augusto da Silva.</a></p>
+</body>
+</html>
+<script>
+let lista = [];
+function criar() {
+    let altura = input_altura.value;
+    let peso = input_peso.value;
+    let objetivo = select_objetivo.value;
+
+    if (objetivo == 1) {
+        objetivo = "Perder peso";
+
+    } else if (objetivo == 2) {
+        objetivo = "Ganhar massa";
+
+    } else if (objetivo == 3) {
+        objetivo = "Manter o físico";
+    }
+
+    lista.push(altura);
+    lista.push(peso);
+    lista.push(objetivo);
+
+    console.log(lista);
+    
+    window.location= "dashboard.html";
+}
+</script>

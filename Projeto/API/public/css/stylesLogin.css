@@ -6,7 +6,9 @@
             color: #fff;
   background: radial-gradient(circle at bottom, #252222 0%, #000 60%);
 }
-        
+.link{
+    color: white;
+}
 
         .navbar {
             display: flex;

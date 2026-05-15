@@ -29,9 +29,6 @@
             <div class="id_senha">
                 <input type="text" id="input_senha" placeholder="Senha">
             </div>
-            <div class="id_csenha">
-                <input type="password" id="input_csenha" placeholder="Confirme sua senha">
-            </div>
             <div class="id_button">
             <button type="submit" onclick="entrar()">Entrar</button>
             </div>
@@ -87,7 +84,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "medidas.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
