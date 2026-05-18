@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/Projeto/API/public/stylesDahsboard.css">
+  <title>Dashboard dieta</title>
+
+</head>
+    <header class="navbar">
+        <div class="logo" onclick="location.reload();">
+            <img src="/Projeto/API/public/assets/img/logomaiorsemfundo - Copia.png" alt="Logo" style="max-width: 100%; ">
+        </div>
+        <nav>
+            <a href="index.html">sobre</a>
+            <a href="cadastro.html">cadastrar</a>
+            <a href="login.html">Logar</a>
+        </nav>
+    </header>
+<body>
+
+<div class="container-cards">
+  <div class="card">
+    <div class="topo">
+      <div>
+        <h1>Alimentação recomendada :</h1>
+        <p>Resumo dos macros :</p>
+      </div>
+    </div>
+
+    <div class="grafico" id="grafico">
+      <div class="interno">
+        <span>Calorias</span>
+        <h2 id="calorias">1200</h2>
+        <div id="porcentagem">
+        </div>
+      </div>
+    </div>
+
+    <div class="macro">
+      <div class="macro-topo">
+        <span>Proteína</span>
+        <span>120g</span>
+      </div>
+      <div class="barra">
+        <div class="progresso" style="width: 80%; background: #3b82f6"></div>
+      </div>
+    </div>
+
+    <div class="macro">
+      <div class="macro-topo">
+        <span>Carboidrato</span>
+        <span>220g</span>
+      </div>
+      <div class="barra">
+        <div class="progresso" style="width: 73%; background: #10b981"></div>
+      </div>
+    </div>
+
+    <div class="macro">
+      <div class="macro-topo">
+        <span>Gordura</span>
+        <span>55g</span>
+      </div>
+
+      <div class="barra">
+        <div class="progresso" style="width: 78%; background: #f59e0b"></div>
+      </div>
+    </div>
+
+  </div>
+
+<div class="card2">
+
+    <div class="topo">
+      <div>
+        <h1>Recomendações de consumo diario :</h1>
+      </div>
+    </div>
+
+    <div class="macro2">
+      <div class="macro-topo">
+        <span>Agua</span>
+        <span>2.7 Litros</span>
+      </div>
+    </div>
+
+    <div class="macro2">
+      <div class="macro-topo">
+        <span>Creatina</span>
+        <span>4g</span>
+      </div>
+    </div>
+
+    <div class="macro2">
+      <div class="macro-topo">
+        <span>Cafeina</span>
+        <span>55g</span>
+      </div>
+    </div>
+
+  </div>
+
+  </div> 
+</body>
+</html>
+<script>
+
+let dados = JSON.parse(localStorage.getItem("dadosDieta"));
+
+document.getElementById("calorias").innerHTML = dados.calorias;
+
+document.getElementById("proteina").innerHTML =
+dados.proteina + "g";
+
+document.getElementById("carbo").innerHTML =
+dados.carbo + "g";
+
+document.getElementById("gordura").innerHTML =
+dados.gordura + "g";
+
+document.getElementById("agua").innerHTML =
+dados.agua + "L";
+
+</script>

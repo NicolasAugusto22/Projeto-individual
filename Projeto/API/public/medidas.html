@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projeto/API/public/stylesMedio.css">
+    <title>Medidas</title>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo" onclick="location.reload();">
+            <img src="/Projeto/API/public/assets/img/logomaiorsemfundo - Copia.png"
+                alt="Logo"
+                style="max-width: 100%;">
+        </div>
+        <nav>
+            <a href="index.html">sobre</a>
+            <a href="cadastro.html">cadastrar</a>
+            <a href="login.html">Logar</a>
+        </nav>
+
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main class="content">
+
+        <div class="boasvindas">
+
+            <h1>Desenvolva sua melhor versão</h1>
+
+            <div class="login">
+
+                <form>
+
+                    <h1>Coloque suas medidas</h1>
+
+                    <div class="id_email">
+    <input class="id_email" type="text" id="input_altura" placeholder="Altura: 170Cm">
+                    </div>
+
+                    <div class="id_senha">
+    <input type="text" id="input_peso" placeholder="Peso: 75Kg">
+                    </div>
+
+                    <select class="select_objetivoo" id="select_objetivo">
+
+                        <option value="">Selecione seu objetivo</option>
+
+                        <option value="1">
+                            Perder peso
+                        </option>
+
+                        <option value="2">
+                            Ganhar massa
+                        </option>
+
+                        <option value="3">
+                            Manter o físico
+                        </option>
+
+                    </select>
+
+                    <div class="id_button">
+                        <button type="button" onclick="criar()">
+                            Criar Dieta
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <div class="linha"></div>
+
+    <div class="container">
+
+        <p>
+            2026 GYMTECH. Feito por
+            <a href="https://www.linkedin.com/in/nicolas-augusto-da-silva-62b828246"
+                class="link">
+                Nicolas Augusto da Silva
+            </a>
+        </p>
+
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+
+        function criar() {
+
+            let altura = Number(input_altura.value);
+            let peso = Number(input_peso.value);
+            let objetivo = select_objetivo.value;
+
+            /* VALIDAÇÃO */
+
+            if (!altura || !peso) {
+
+                alert("Preencha todos os campos");
+                return;
+            }
+
+            if (objetivo == "") {
+
+                alert("Selecione um objetivo");
+                return;
+            }
+
+            /* VARIÁVEIS */
+
+            let calorias = 0;
+            let proteina = 0;
+            let carbo = 0;
+            let gordura = 0;
+            let agua = 0;
+
+            agua = (peso * 35) / 1000;
+
+            /* OBJETIVOS */
+
+            if (objetivo == "1") {
+
+                objetivo = "Perder peso";
+
+                calorias = peso * 25;
+                proteina = peso * 2;
+                carbo = peso * 2;
+                gordura = peso * 0.8;
+            }
+
+            else if (objetivo == "2") {
+
+                objetivo = "Ganhar massa";
+
+                calorias = peso * 35;
+                proteina = peso * 2.2;
+                carbo = peso * 4;
+                gordura = peso * 1;
+            }
+
+            else if (objetivo == "3") {
+
+                objetivo = "Manter o físico";
+
+                calorias = peso * 30;
+                proteina = peso * 2;
+                carbo = peso * 3;
+                gordura = peso * 0.9;
+            }
+
+            let dados = {
+                altura: altura,
+                peso: peso,
+                objetivo: objetivo,
+                calorias: Math.round(calorias),
+                proteina: Math.round(proteina),
+                carbo: Math.round(carbo),
+                gordura: Math.round(gordura),
+                agua: agua.toFixed(1)
+            };
+
+            localStorage.setItem(
+                "dadosDieta",
+                JSON.stringify(dados)
+            );
+
+
+            console.log(dados);
+            window.location.href = "./dashboard.html";
+        }
+
+    </script>
+
+</body>
+
+</html>
+```

@@ -4,12 +4,8 @@
             background-color: black;
             font-family: Arial, sans-serif;
             color: #fff;
-  background: radial-gradient(circle at bottom, #252222 0%, #000 60%);
+            background: radial-gradient(circle at bottom, #252222 0%, #000 60%);
 }
-.link{
-    color: white;
-}
-
         .navbar {
             display: flex;
             justify-content: space-between;

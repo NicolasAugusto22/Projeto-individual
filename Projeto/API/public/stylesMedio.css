@@ -94,18 +94,18 @@
             background-size: cover;
             background-position: center;
         }
-        .link{
+.link {
     color: white;
     font-size: 16px;
 }
 
-        .boasvindas {
-            background: black ;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-            text-align: center;
-            margin: 0 auto;
+.boasvindas {
+    background: black ;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 0 auto;
         }
         .boasvindas1 {
     background: black;  
@@ -117,12 +117,6 @@
     width: 300px;
     border: 1px solid #fff;
         }
-     /*   .boasvindas:hover .boasvindas1 {
-            display: block;
-            max-height: 300px;
-            opacity: 1;
-            margin-top: 20px;
-        } */
 
 .login {
     background: black;  
@@ -146,19 +140,22 @@
 
 .select_objetivoo{
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ffffff;
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid rgba(255,255,255,0.2);
     border-radius: 4px;
-    background: transparent;
-    color: #757575;
-    font-size: 16px;
-    box-sizing: border-box;
-    height: 42px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
 }
 
 .select_objetivoo option{
-    background: #000;
-    color: #757575;
+    background: #111827;
+    color: white;
 }
 
 .container {
@@ -171,17 +168,6 @@
     border-radius: 12px;
     }
 
-.id_email input, .id_senha input, .id_csenha input {
-    width: 100%;  
-    padding: 10px;
-    border: 1px solid #fff; 
-    border-radius: 4px;
-    background: transparent;
-    color: #fff;
-    font-size: 16px;
-    box-sizing: border-box;
-    height: 42px;
-}
 .id_button button {
     width: 100%;
     padding: 10px;
@@ -192,6 +178,7 @@
     cursor: pointer;
     box-sizing: border-box;
     height: 42px;
+    margin-top: 10px;
 }
 .texto-box {
     margin: 40px auto;
